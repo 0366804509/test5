@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class LoginExample {
+
+    // Khai báo thông tin đăng nhập
+    private static final String USERNAME = "admin";
+    private static final String PASSWORD = "password123";
+
+    public static void main(String[] args) {
+        // Khởi tạo đối tượng Scanner để nhận thông tin từ người dùng
+        Scanner scanner = new Scanner(System.in);
+
+        // Nhập tên đăng nhập
+        System.out.print("Nhập tên đăng nhập: ");
+        String usernameInput = scanner.nextLine();
+
+        // Nhập mật khẩu
+        System.out.print("Nhập mật khẩu: ");
+        String passwordInput = scanner.nextLine();
+
+        // Kiểm tra tên đăng nhập và mật khẩu
+        if (usernameInput.equals(USERNAME) && passwordInput.equals(PASSWORD)) {
+            System.out.println("Đăng nhập thành công!");
+        } else {
+            System.out.println("Tên đăng nhập hoặc mật khẩu sai. Vui lòng thử lại.");
+        }
+
+        // Đóng Scanner
+        scanner.close();
+    }
+}
